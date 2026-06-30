@@ -31,6 +31,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final MaterialButton btnClear;
 
   @NonNull
+  public final MaterialButton btnHistory;
+
+  @NonNull
   public final MaterialButton btnReload;
 
   @NonNull
@@ -49,7 +52,10 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ImageView ivLogo;
 
   @NonNull
-  public final LinearLayout layoutButtons;
+  public final LinearLayout layoutButtonsRow1;
+
+  @NonNull
+  public final LinearLayout layoutButtonsRow2;
 
   @NonNull
   public final LinearLayout layoutEmptyState;
@@ -73,22 +79,24 @@ public final class ActivityMainBinding implements ViewBinding {
   public final WebView webView;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull MaterialButton btnClear,
-      @NonNull MaterialButton btnReload, @NonNull MaterialButton btnSend,
-      @NonNull MaterialCardView cardControls, @NonNull View dividerTop,
-      @NonNull TextInputEditText etUrl, @NonNull ImageView ivLogo,
-      @NonNull LinearLayout layoutButtons, @NonNull LinearLayout layoutEmptyState,
-      @NonNull LinearProgressIndicator progressBar, @NonNull ConstraintLayout rootLayout,
-      @NonNull TextInputLayout tilUrl, @NonNull TextView tvAppName, @NonNull TextView tvSubtitle,
-      @NonNull WebView webView) {
+      @NonNull MaterialButton btnHistory, @NonNull MaterialButton btnReload,
+      @NonNull MaterialButton btnSend, @NonNull MaterialCardView cardControls,
+      @NonNull View dividerTop, @NonNull TextInputEditText etUrl, @NonNull ImageView ivLogo,
+      @NonNull LinearLayout layoutButtonsRow1, @NonNull LinearLayout layoutButtonsRow2,
+      @NonNull LinearLayout layoutEmptyState, @NonNull LinearProgressIndicator progressBar,
+      @NonNull ConstraintLayout rootLayout, @NonNull TextInputLayout tilUrl,
+      @NonNull TextView tvAppName, @NonNull TextView tvSubtitle, @NonNull WebView webView) {
     this.rootView = rootView;
     this.btnClear = btnClear;
+    this.btnHistory = btnHistory;
     this.btnReload = btnReload;
     this.btnSend = btnSend;
     this.cardControls = cardControls;
     this.dividerTop = dividerTop;
     this.etUrl = etUrl;
     this.ivLogo = ivLogo;
-    this.layoutButtons = layoutButtons;
+    this.layoutButtonsRow1 = layoutButtonsRow1;
+    this.layoutButtonsRow2 = layoutButtonsRow2;
     this.layoutEmptyState = layoutEmptyState;
     this.progressBar = progressBar;
     this.rootLayout = rootLayout;
@@ -131,6 +139,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_history;
+      MaterialButton btnHistory = ViewBindings.findChildViewById(rootView, id);
+      if (btnHistory == null) {
+        break missingId;
+      }
+
       id = R.id.btn_reload;
       MaterialButton btnReload = ViewBindings.findChildViewById(rootView, id);
       if (btnReload == null) {
@@ -167,9 +181,15 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.layout_buttons;
-      LinearLayout layoutButtons = ViewBindings.findChildViewById(rootView, id);
-      if (layoutButtons == null) {
+      id = R.id.layout_buttons_row1;
+      LinearLayout layoutButtonsRow1 = ViewBindings.findChildViewById(rootView, id);
+      if (layoutButtonsRow1 == null) {
+        break missingId;
+      }
+
+      id = R.id.layout_buttons_row2;
+      LinearLayout layoutButtonsRow2 = ViewBindings.findChildViewById(rootView, id);
+      if (layoutButtonsRow2 == null) {
         break missingId;
       }
 
@@ -211,9 +231,9 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnClear, btnReload, btnSend,
-          cardControls, dividerTop, etUrl, ivLogo, layoutButtons, layoutEmptyState, progressBar,
-          rootLayout, tilUrl, tvAppName, tvSubtitle, webView);
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnClear, btnHistory, btnReload,
+          btnSend, cardControls, dividerTop, etUrl, ivLogo, layoutButtonsRow1, layoutButtonsRow2,
+          layoutEmptyState, progressBar, rootLayout, tilUrl, tvAppName, tvSubtitle, webView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

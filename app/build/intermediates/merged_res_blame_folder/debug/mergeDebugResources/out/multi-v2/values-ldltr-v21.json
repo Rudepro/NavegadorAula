@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.navegadoraula.app-mergeDebugResources-32:/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "com.example.navegadoraula.app-mergeDebugResources-33:/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\elbet\\.gradle\\caches\\8.9\\transforms\\8265414db37dde44d4f05de5bbe5c042\\transformed\\appcompat-1.7.0\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "source": "C:\\Users\\elbet\\.gradle\\caches\\8.9\\transforms\\d385c8bb86b87d2eb9d3b976111abf01\\transformed\\appcompat-1.7.0\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_history.xml
+    Fila del historial de navegación.
+
+    Estructura:
+    ┌──────────────────────────────────────────────┐
+    │  🌐  Título de la página              [×]   │
+    │      dominio.com  ·  29/06/2026 19:45       │
+    └──────────────────────────────────────────────┘
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingStart="16dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="12dp"
+    android:minHeight="64dp">
+
+    <!-- Ícono de historial -->
+    <ImageView
+        android:id="@+id/iv_history_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@android:drawable/ic_menu_recent_history"
+        android:padding="6dp"
+        android:background="@drawable/ic_history_bg"
+        android:contentDescription="@string/history_entry_icon_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Título de la página -->
+    <TextView
+        android:id="@+id/tv_history_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#1A1C23"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toStartOf="@id/btn_delete_entry"
+        app:layout_constraintStart_toEndOf="@id/iv_history_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_history_domain" />
+
+    <!-- Dominio + timestamp -->
+    <TextView
+        android:id="@+id/tv_history_domain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#757891"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toStartOf="@id/btn_delete_entry"
+        app:layout_constraintStart_toEndOf="@id/iv_history_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv_history_title"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Timestamp (en la misma fila que dominio) -->
+    <TextView
+        android:id="@+id/tv_history_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#757891"
+        android:textSize="11sp"
+        android:fontFamily="sans-serif"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/btn_delete_entry"
+        app:layout_constraintTop_toBottomOf="@id/tv_history_title"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Botón eliminar entrada -->
+    <ImageButton
+        android:id="@+id/btn_delete_entry"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:contentDescription="@string/history_delete_entry"
+        android:tint="#757891"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

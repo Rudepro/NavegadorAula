@@ -9,12 +9,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.navegadoraula.databinding.ActivityMainBinding
 import com.example.navegadoraula.security.UrlValidator
+import com.example.navegadoraula.utils.BrowsingHistoryManager
 import com.example.navegadoraula.utils.Utils
 import com.example.navegadoraula.webview.SecureWebChromeClient
 import com.example.navegadoraula.webview.SecureWebViewClient
 import com.example.navegadoraula.webview.WebViewManager
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 /**
  * MainActivity
@@ -23,18 +26,21 @@ import com.example.navegadoraula.webview.WebViewManager
  *
  * Responsabilidades:
  *  1. Inflar el layout y obtener referencias mediante ViewBinding.
- *  2. Inicializar todos los componentes: WebViewManager, UrlValidator.
+ *  2. Inicializar todos los componentes: WebViewManager, UrlValidator, BrowsingHistoryManager.
  *  3. Gestionar los estados de la interfaz (cargando, error, idle).
  *  4. Responder a las acciones del usuario (botones, teclado, Back).
  *  5. Recibir notificaciones del WebViewClient y actualizar la UI.
+ *  6. Gestionar el historial de navegación (solo páginas permitidas).
  *
  * Patrón de estado de UI:
  *  - IDLE: Campos habilitados, sin carga, sin página o página cargada.
  *  - LOADING: Campos deshabilitados, ProgressBar visible.
  *  - ERROR: Regresa a IDLE con mensaje de error visible.
  *
- * Principio Clean Architecture: MainActivity es solo la capa de presentación.
- * Toda la lógica de seguridad y navegación vive en las capas inferiores.
+ * Historial de navegación:
+ *  - Se registra SOLO en onLoadFinished (página confirmada como segura por HtmlAnalyzer).
+ *  - Los bloqueos (onDomainBlocked, onContentBlocked, etc.) NO generan entradas.
+ *  - Máximo 10 entradas, persiste entre sesiones en SharedPreferences.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -44,9 +50,15 @@ class MainActivity : AppCompatActivity() {
     // Componentes del dominio
     private lateinit var webViewManager: WebViewManager
     private lateinit var urlValidator: UrlValidator
+    private lateinit var historyManager: BrowsingHistoryManager
 
     // Estado de si hay una página cargada actualmente
     private var hasPageLoaded = false
+
+    // Última URL confirmada y guardada en el historial.
+    // Evita duplicados cuando onPageFinished se dispara múltiples veces
+    // durante la misma navegación (ej: redirects de google.com → www.google.com).
+    private var lastCommittedUrl: String? = null
 
     // =========================================================================
     // CICLO DE VIDA
@@ -106,6 +118,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun initComponents() {
         urlValidator = UrlValidator()
+        historyManager = BrowsingHistoryManager(this)
 
         webViewManager = WebViewManager(
             webView = binding.webView,
@@ -119,11 +132,18 @@ class MainActivity : AppCompatActivity() {
     /**
      * Crea el callback de navegación que conecta el WebViewClient con la UI.
      * Todos los métodos se ejecutan en el hilo principal (garantizado por WebView).
+     *
+     * IMPORTANTE: onLoadFinished es el ÚNICO lugar donde se agrega al historial.
+     * Esto garantiza que solo las páginas aprobadas por todas las capas de seguridad
+     * (incluyendo HtmlAnalyzer) sean registradas.
      */
     private fun createNavigationCallback(): SecureWebViewClient.NavigationCallback {
         return object : SecureWebViewClient.NavigationCallback {
 
-            override fun onLoadStarted() {
+            override fun onLoadStarted(url: String) {
+                // NO se resetea lastCommittedUrl aqui.
+                // Si se reseteara, el reload siempre vería la URL como "nueva" y la guardaría.
+                // lastCommittedUrl solo se resetea cuando el usuario limpia o hay un bloqueo.
                 setLoadingState(true)
                 showEmptyState(false)
                 hasPageLoaded = false
@@ -132,10 +152,19 @@ class MainActivity : AppCompatActivity() {
             override fun onLoadFinished() {
                 setLoadingState(false)
                 hasPageLoaded = true
-                // Actualizar el campo URL con la URL final (por redirecciones)
                 webViewManager.getCurrentUrl()?.let { finalUrl ->
                     if (finalUrl != "about:blank") {
                         binding.etUrl.setText(finalUrl)
+
+                        // Comparación con normalización (quita www. y slash final)
+                        // para evitar duplicados por redirects del tipo google.com → www.google.com
+                        val normalizedFinal = normalizeUrlForComparison(finalUrl)
+                        val normalizedLast = lastCommittedUrl?.let { normalizeUrlForComparison(it) }
+                        if (normalizedFinal != normalizedLast) {
+                            lastCommittedUrl = finalUrl
+                            val pageTitle = binding.webView.title
+                            historyManager.addEntry(finalUrl, pageTitle)
+                        }
                     }
                 }
             }
@@ -158,43 +187,50 @@ class MainActivity : AppCompatActivity() {
                 )
             }
 
-            override fun onDomainBlocked() {
+            override fun onDomainBlocked(url: String) {
+                historyManager.addEntry(url, url)
+                lastCommittedUrl = null  // Permitir guardar la próxima navegación
+                binding.webView.stopLoading()
                 setLoadingState(false)
                 binding.webView.visibility = View.INVISIBLE
                 showEmptyState(true)
                 hasPageLoaded = false
-                binding.webView.loadUrl("about:blank")
                 Utils.showMessage(
                     context = this@MainActivity,
                     message = getString(R.string.error_domain_blocked)
                 )
             }
 
-            override fun onContentBlocked() {
+            override fun onContentBlocked(url: String) {
+                historyManager.addEntry(url, url)
+                lastCommittedUrl = null
                 setLoadingState(false)
                 binding.webView.visibility = View.INVISIBLE
                 showEmptyState(true)
                 hasPageLoaded = false
-                binding.webView.loadUrl("about:blank")
                 Utils.showMessage(
                     context = this@MainActivity,
                     message = getString(R.string.error_keyword_blocked)
                 )
             }
 
-            override fun onSafeBrowsingThreat() {
+            override fun onSafeBrowsingThreat(url: String) {
+                historyManager.addEntry(url, url)
+                lastCommittedUrl = null
+                binding.webView.stopLoading()
                 setLoadingState(false)
                 binding.webView.visibility = View.INVISIBLE
                 showEmptyState(true)
                 hasPageLoaded = false
-                binding.webView.loadUrl("about:blank")
                 Utils.showMessage(
                     context = this@MainActivity,
                     message = getString(R.string.error_safe_browsing)
                 )
             }
 
-            override fun onProtocolBlocked() {
+            override fun onProtocolBlocked(url: String) {
+                historyManager.addEntry(url, url)
+                lastCommittedUrl = null
                 setLoadingState(false)
                 Utils.showMessage(
                     context = this@MainActivity,
@@ -225,15 +261,15 @@ class MainActivity : AppCompatActivity() {
     // =========================================================================
 
     /**
-     * Configura los listeners de los tres botones de acción.
+     * Configura los listeners de los cuatro botones de acción.
      */
     private fun setupButtonListeners() {
-        // ── Botón Enviar ────────────────────────────────────────────────────
+        // ── Botón Navegar ────────────────────────────────────────────────────
         binding.btnSend.setOnClickListener {
             attemptNavigation()
         }
 
-        // ── Botón Borrar ────────────────────────────────────────────────────
+        // ── Botón Limpiar ────────────────────────────────────────────────────
         binding.btnClear.setOnClickListener {
             clearUrlField()
         }
@@ -241,6 +277,11 @@ class MainActivity : AppCompatActivity() {
         // ── Botón Recargar ──────────────────────────────────────────────────
         binding.btnReload.setOnClickListener {
             reloadCurrentPage()
+        }
+
+        // ── Botón Historial ─────────────────────────────────────────────────
+        binding.btnHistory.setOnClickListener {
+            showHistoryBottomSheet()
         }
     }
 
@@ -286,7 +327,7 @@ class MainActivity : AppCompatActivity() {
 
         when (val result = urlValidator.validate(rawUrl)) {
             is UrlValidator.ValidationResult.Valid -> {
-                // Deshabilitar campos INMEDIATAMENTE después de presionar Enviar
+                // Deshabilitar campos INMEDIATAMENTE después de presionar Navegar
                 setLoadingState(true)
                 hideKeyboard()
                 webViewManager.loadUrl(rawUrl)
@@ -324,29 +365,119 @@ class MainActivity : AppCompatActivity() {
     }
 
     // =========================================================================
+    // HISTORIAL DE NAVEGACIÓN
+    // =========================================================================
+
+    /**
+     * Muestra el panel de historial como un BottomSheetDialog.
+     *
+     * El panel contiene:
+     *  - Lista de hasta 10 páginas visitadas (más reciente primero).
+     *  - Botón "Borrar todo" en el encabezado.
+     *  - Botón "×" en cada fila para borrar esa entrada.
+     *  - Estado vacío si no hay historial.
+     *
+     * Al tocar una entrada, se cierra el panel y se navega a esa URL.
+     */
+    private fun showHistoryBottomSheet() {
+        val dialog = BottomSheetDialog(this)
+        val dialogView = layoutInflater.inflate(R.layout.dialog_history, null)
+        dialog.setContentView(dialogView)
+
+        val rvHistory = dialogView.findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.rv_history)
+        val layoutEmpty = dialogView.findViewById<View>(R.id.layout_history_empty)
+        val btnClearAll = dialogView.findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_clear_all_history)
+
+        // Construir el adapter con los datos actuales
+        val historyList = historyManager.getEntries().toMutableList()
+
+        val adapter = HistoryAdapter(
+            entries = historyList,
+            onUrlSelected = { url ->
+                // Cerrar el dialog y navegar a la URL seleccionada
+                dialog.dismiss()
+                binding.etUrl.setText(url)
+                setLoadingState(true)
+                hideKeyboard()
+                webViewManager.loadUrl(url)
+            },
+            onDeleteEntry = { position ->
+                // Borrar la entrada seleccionada
+                val removed = historyManager.removeEntry(position)
+                if (removed) {
+                    (rvHistory.adapter as? HistoryAdapter)?.removeAt(position)
+                    // Mostrar/ocultar estado vacío
+                    updateHistoryEmptyState(rvHistory, layoutEmpty)
+                    Utils.showMessage(
+                        context = this@MainActivity,
+                        message = getString(R.string.history_deleted)
+                    )
+                }
+            }
+        )
+
+        rvHistory.layoutManager = LinearLayoutManager(this)
+        rvHistory.adapter = adapter
+
+        // Mostrar/ocultar estado vacío al abrir
+        updateHistoryEmptyState(rvHistory, layoutEmpty)
+
+        // Botón Borrar Todo
+        btnClearAll.setOnClickListener {
+            historyManager.clearAll()
+            adapter.updateEntries(emptyList())
+            updateHistoryEmptyState(rvHistory, layoutEmpty)
+            Utils.showMessage(
+                context = this@MainActivity,
+                message = getString(R.string.history_cleared)
+            )
+        }
+
+        dialog.show()
+    }
+
+    /**
+     * Actualiza la visibilidad del estado vacío según si hay entradas en el historial.
+     */
+    private fun updateHistoryEmptyState(
+        rvHistory: androidx.recyclerview.widget.RecyclerView,
+        layoutEmpty: View
+    ) {
+        val isEmpty = historyManager.isEmpty()
+        rvHistory.visibility = if (isEmpty) View.GONE else View.VISIBLE
+        layoutEmpty.visibility = if (isEmpty) View.VISIBLE else View.GONE
+    }
+
+    // =========================================================================
     // ACCIONES DE BOTONES
     // =========================================================================
 
     /**
-     * Limpia completamente el campo de URL.
+     * Limpia completamente el campo de URL y regresa a la pantalla inicial.
      *
      * Comportamiento según requisitos:
      *  - Limpiar el texto del campo.
      *  - Regresar el foco al campo.
-     *  - Habilitar el botón Enviar (en caso de que estuviera deshabilitado).
+     *  - Habilitar el botón Navegar (en caso de que estuviera deshabilitado).
      */
     private fun clearUrlField() {
         binding.etUrl.text?.clear()
-        binding.etUrl.isEnabled = true
-        binding.btnSend.isEnabled = true
-        
-        // Regresar a la pantalla inicial y limpiar datos
-        binding.webView.loadUrl("about:blank")
+
+        // Detener cualquier carga en progreso y limpiar datos.
+        // NO llamamos webView.loadUrl("about:blank") porque dispararía los callbacks
+        // onLoadStarted/onLoadFinished que ocultarían el estado vacío y mostrarían
+        // el WebView en blanco. En su lugar, detenemos la carga directamente.
+        binding.webView.stopLoading()
         Utils.clearWebViewData(binding.webView)
+        binding.webView.clearHistory()
+
+        // Resetear estado completamente sin disparar callbacks
+        setLoadingState(false)
         showEmptyState(true)
         binding.webView.visibility = View.INVISIBLE
         hasPageLoaded = false
-        
+        lastCommittedUrl = null  // Permitir guardar la próxima navegación
+
         focusUrlField()
     }
 
@@ -374,12 +505,12 @@ class MainActivity : AppCompatActivity() {
      *
      * Estado CARGANDO:
      *  - Campo URL deshabilitado.
-     *  - Botón Enviar deshabilitado.
+     *  - Botón Navegar deshabilitado.
      *  - ProgressBar visible.
      *
      * Estado IDLE:
      *  - Campo URL habilitado.
-     *  - Botón Enviar habilitado.
+     *  - Botón Navegar habilitado.
      *  - ProgressBar oculto.
      *
      * @param isLoading true para activar el estado de carga.
@@ -414,7 +545,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Coloca el foco en el campo de URL y muestra el teclado virtual.
-     * Invocado al iniciar la app y al presionar el botón Borrar.
+     * Invocado al iniciar la app y al presionar el botón Limpiar.
      */
     private fun focusUrlField() {
         binding.etUrl.requestFocus()
@@ -428,7 +559,20 @@ class MainActivity : AppCompatActivity() {
      * Oculta el teclado virtual. Se llama antes de iniciar la carga de una página.
      */
     private fun hideKeyboard() {
-        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(binding.rootLayout.windowToken, 0)
+            val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(binding.etUrl.windowToken, 0)
+    }
+
+    /**
+     * Normaliza una URL para comparación en el historial.
+     * Quita "www." y la barra final "/" para evitar que redirecciones comunes
+     * (ej: google.com -> www.google.com/) se registren como páginas diferentes.
+     */
+    private fun normalizeUrlForComparison(url: String): String {
+        return url
+            .removePrefix("http://")
+            .removePrefix("https://")
+            .removePrefix("www.")
+            .trimEnd('/')
     }
 }

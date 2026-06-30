@@ -1,4 +1,4 @@
-#Mon Jun 29 19:13:27 ECT 2026
+#Mon Jun 29 21:15:04 ECT 2026
 base.0=C\:\\laragon\\www\\NavegadorAula\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\laragon\\www\\NavegadorAula\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\laragon\\www\\NavegadorAula\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex

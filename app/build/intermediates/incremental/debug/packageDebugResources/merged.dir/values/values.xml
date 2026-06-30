@@ -31,9 +31,10 @@
     <color name="success_indicator">#1A6B3C</color>
     <string name="app_name">NavegadorAula</string>
     <string name="app_subtitle">Navegador Seguro Educativo</string>
-    <string name="btn_clear">Borrar</string>
+    <string name="btn_clear">Limpiar</string>
+    <string name="btn_history">Historial</string>
     <string name="btn_reload">Recargar</string>
-    <string name="btn_send">Enviar</string>
+    <string name="btn_send">Navegar</string>
     <string name="error_connection">No fue posible acceder al sitio. Verifique su conexión a Internet e intente nuevamente.</string>
     <string name="error_domain_blocked">El dominio solicitado se encuentra bloqueado por políticas de seguridad.</string>
     <string name="error_html_content_blocked">Este sitio web no está permitido.</string>
@@ -47,6 +48,13 @@
     <string name="error_url_invalid">La dirección ingresada no es válida. Verifique el formato (ej: https://dominio.com).</string>
     <string name="error_url_spaces">La URL no puede contener espacios en blanco.</string>
     <string name="hint_url">Ingrese la URL (https://…)</string>
+    <string name="history_clear_all">Borrar todo</string>
+    <string name="history_cleared">Historial borrado</string>
+    <string name="history_delete_entry">Eliminar esta entrada</string>
+    <string name="history_deleted">Entrada eliminada</string>
+    <string name="history_empty">No hay páginas visitadas aún</string>
+    <string name="history_entry_icon_desc">Página visitada</string>
+    <string name="history_title">Historial de Navegación</string>
     <string name="info_field_cleared">Campo de URL limpiado.</string>
     <string name="info_no_page_to_reload">No existe ninguna página para recargar.</string>
     <string name="info_page_blocked_cleanup">Página bloqueada. Datos de navegación limpiados.</string>

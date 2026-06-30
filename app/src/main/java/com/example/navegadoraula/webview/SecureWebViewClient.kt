@@ -46,8 +46,8 @@ class SecureWebViewClient(
      * Sigue el patrón Observer para desacoplar la lógica de seguridad de la UI.
      */
     interface NavigationCallback {
-        /** La página comenzó a cargar. */
-        fun onLoadStarted()
+        /** Invocado cuando comienza la carga de la página. */
+        fun onLoadStarted(url: String)
 
         /** La página terminó de cargar exitosamente. */
         fun onLoadFinished()
@@ -59,16 +59,16 @@ class SecureWebViewClient(
         fun onSslError()
 
         /** Un dominio fue bloqueado por la lista negra. */
-        fun onDomainBlocked()
+        fun onDomainBlocked(url: String)
 
         /** Se detectó contenido prohibido en la URL o la página. */
-        fun onContentBlocked()
+        fun onContentBlocked(url: String)
 
         /** Safe Browsing detectó una amenaza. */
-        fun onSafeBrowsingThreat()
+        fun onSafeBrowsingThreat(url: String)
 
         /** Se intentó usar un protocolo no permitido. */
-        fun onProtocolBlocked()
+        fun onProtocolBlocked(url: String)
     }
 
     // =========================================================================
@@ -93,29 +93,25 @@ class SecureWebViewClient(
     override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
         val url = request.url.toString()
 
-        return when (val result = domainFilter.checkUrl(url)) {
+        return when (domainFilter.checkUrl(url)) {
             is DomainFilter.DomainCheckResult.Allowed -> {
-                // Verificar también palabras clave en la URL (Capa 2 a nivel de navegación)
-                val kwResult = kotlinx.coroutines.runBlocking { keywordFilter.analyzeUrl(url) }
-                if (kwResult is KeywordFilter.KeywordCheckResult.Blocked) {
-                    Utils.clearWebViewData(view)
-                    navigationCallback.onContentBlocked()
-                    true // Bloquear
-                } else {
-                    false // Permitir: el WebView cargará la URL
-                }
+                // Dominio permitido: el WebView cargará la URL.
+                // NO se verifica keywords en la URL para evitar bloquear búsquedas
+                // legítimas (ej: buscar "xvideos" en Google).
+                // El filtro de contenido (HtmlAnalyzer) bloquea el contenido real de la página.
+                false
             }
             is DomainFilter.DomainCheckResult.Blocked -> {
                 Utils.clearWebViewData(view)
-                navigationCallback.onDomainBlocked()
+                navigationCallback.onDomainBlocked(url)
                 true // Bloquear
             }
             is DomainFilter.DomainCheckResult.InvalidProtocol -> {
-                navigationCallback.onProtocolBlocked()
+                navigationCallback.onProtocolBlocked(url)
                 true // Bloquear
             }
             is DomainFilter.DomainCheckResult.MalformedUrl -> {
-                navigationCallback.onProtocolBlocked()
+                navigationCallback.onProtocolBlocked(url)
                 true // Bloquear
             }
         }
@@ -186,7 +182,9 @@ class SecureWebViewClient(
      */
     override fun onPageStarted(view: WebView, url: String?, favicon: Bitmap?) {
         super.onPageStarted(view, url, favicon)
-        navigationCallback.onLoadStarted()
+        if (!url.isNullOrBlank()) {
+            navigationCallback.onLoadStarted(url)
+        }
     }
 
     /**
@@ -199,23 +197,38 @@ class SecureWebViewClient(
     override fun onPageFinished(view: WebView, url: String?) {
         super.onPageFinished(view, url)
 
-        // Ejecutar análisis de HTML y metadatos (Capas 5 y 6)
         if (!url.isNullOrBlank() && url != "about:blank") {
+            // Motores de búsqueda de confianza: NO analizamos su contenido.
+            // Sus páginas de resultados pueden mencionar sitios prohibidos
+            // sin alojar ese contenido. El DomainFilter bloquea los dominios
+            // prohibidos antes de que carguen si el usuario navega a ellos.
+            val host = android.net.Uri.parse(url).host?.lowercase() ?: ""
+            val trustedSearchEngines = setOf(
+                "google.com", "www.google.com",
+                "bing.com", "www.bing.com",
+                "duckduckgo.com", "www.duckduckgo.com",
+                "search.yahoo.com"
+            )
+            if (host in trustedSearchEngines) {
+                navigationCallback.onLoadFinished()
+                return
+            }
+
+            // Para el resto de sitios: ejecutar análisis de HTML y metadatos
             htmlAnalyzer.analyzePageContent(view, object : HtmlAnalyzer.ContentAnalysisCallback {
                 override fun onProhibitedContentDetected(webView: WebView, category: String) {
                     // Limpiar todo antes de bloquear (Capa 9)
                     Utils.clearWebViewData(webView)
                     webView.loadUrl("about:blank")
-                    navigationCallback.onContentBlocked()
+                    navigationCallback.onContentBlocked(url)
                 }
 
                 override fun onContentClean(webView: WebView) {
-                    // Solo cuando se confirme que está limpia, se notifica que terminó la carga
                     navigationCallback.onLoadFinished()
                 }
             })
         } else {
-            // Si es about:blank o nula, finalizamos la carga inmediatamente
+            // Si es about:blank o nula, finalizamos la carga sin guardar historial
             navigationCallback.onLoadFinished()
         }
     }
@@ -284,7 +297,7 @@ class SecureWebViewClient(
             appCallback = object : SafeBrowsingManager.SafeBrowsingCallback {
                 override fun onThreatDetected(webView: WebView, url: String, threatType: Int) {
                     Utils.clearWebViewData(webView)
-                    navigationCallback.onSafeBrowsingThreat()
+                    navigationCallback.onSafeBrowsingThreat(url)
                 }
             }
         )

@@ -5,13 +5,25 @@
 
     <!-- Textos de la UI -->
     <string name="hint_url">Ingrese la URL (https://…)</string>
-    <string name="btn_send">Enviar</string>
-    <string name="btn_clear">Borrar</string>
+    <string name="btn_send">Navegar</string>
+    <string name="btn_clear">Limpiar</string>
     <string name="btn_reload">Recargar</string>
+    <string name="btn_history">Historial</string>
     <string name="label_url">Dirección web</string>
     <string name="logo_description">Logo de NavegadorAula</string>
     <string name="app_subtitle">Navegador Seguro Educativo</string>
     <string name="loading">Cargando…</string>
+
+    <!-- =============================================
+         HISTORIAL DE NAVEGACIÓN
+         ============================================= -->
+    <string name="history_title">Historial de Navegación</string>
+    <string name="history_clear_all">Borrar todo</string>
+    <string name="history_empty">No hay páginas visitadas aún</string>
+    <string name="history_deleted">Entrada eliminada</string>
+    <string name="history_cleared">Historial borrado</string>
+    <string name="history_entry_icon_desc">Página visitada</string>
+    <string name="history_delete_entry">Eliminar esta entrada</string>
 
     <!-- =============================================
          MENSAJES DE VALIDACIÓN DE URL

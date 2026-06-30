@@ -34,6 +34,9 @@ class WebViewManager(
     private val navigationCallback: SecureWebViewClient.NavigationCallback,
     private val progressCallback: SecureWebChromeClient.ProgressCallback
 ) {
+    // DomainFilter como propiedad de clase para poder usarlo en loadUrl()
+    // y así filtrar URLs escritas directamente por el usuario.
+    private val domainFilter = DomainFilter()
 
     /**
      * Configura el WebView con todos los ajustes de seguridad y asigna los clientes.
@@ -134,7 +137,6 @@ class WebViewManager(
      * Crea e instancia los clientes seguros y los asigna al WebView.
      */
     private fun assignClients() {
-        val domainFilter = DomainFilter()
         val keywordFilter = KeywordFilter()
         val htmlAnalyzer = HtmlAnalyzer(keywordFilter)
         val safeBrowsingManager = SafeBrowsingManager()
@@ -155,14 +157,22 @@ class WebViewManager(
     }
 
     /**
-     * Navega a una URL de forma segura.
-     * Se asume que la URL ya fue validada por UrlValidator y DomainFilter
-     * antes de llegar aquí.
+     * Navega a la URL validando primero el dominio.
      *
-     * @param url La URL validada a cargar.
+     * IMPORTANTE: shouldOverrideUrlLoading NO se llama cuando el código
+     * invoca webView.loadUrl() directamente (comportamiento estándar de Android).
+     * Por eso validamos el dominio aqui antes de cargar.
+     * NO se verifica keywords en la URL para no bloquear búsquedas legítimas.
+     *
+     * @param url La URL a cargar (ya validada en formato por UrlValidator).
      */
     fun loadUrl(url: String) {
-        webView.loadUrl(url)
+        when (domainFilter.checkUrl(url)) {
+            is DomainFilter.DomainCheckResult.Allowed -> webView.loadUrl(url)
+            is DomainFilter.DomainCheckResult.Blocked -> navigationCallback.onDomainBlocked(url)
+            is DomainFilter.DomainCheckResult.InvalidProtocol,
+            is DomainFilter.DomainCheckResult.MalformedUrl -> navigationCallback.onProtocolBlocked(url)
+        }
     }
 
     /**

@@ -3027,6 +3027,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_bottom_sheet
+drawable bg_handle
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3049,6 +3051,7 @@ drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
+drawable ic_history_bg
 drawable ic_keyboard_black_24dp
 drawable ic_logo
 drawable ic_m3_chip_check
@@ -3237,6 +3240,9 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btn_clear
+id btn_clear_all_history
+id btn_delete_entry
+id btn_history
 id btn_reload
 id btn_send
 id buttonPanel
@@ -3372,15 +3378,19 @@ id indeterminate
 id info
 id invisible
 id inward
+id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
+id iv_history_icon
 id iv_logo
 id jumpToEnd
 id jumpToStart
 id labeled
 id layout
-id layout_buttons
+id layout_buttons_row1
+id layout_buttons_row2
 id layout_empty_state
+id layout_history_empty
 id left
 id leftToRight
 id legacy
@@ -3499,6 +3509,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
@@ -3517,6 +3528,7 @@ id right_side
 id root_layout
 id rounded
 id row_index_key
+id rv_history
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3629,6 +3641,10 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_app_name
+id tv_history_domain
+id tv_history_header
+id tv_history_time
+id tv_history_title
 id tv_subtitle
 id unchecked
 id uniform
@@ -3786,8 +3802,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_history
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_history
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3890,6 +3908,7 @@ string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
 string btn_clear
+string btn_history
 string btn_reload
 string btn_send
 string call_notification_answer_action
@@ -3922,6 +3941,13 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string hint_url
+string history_clear_all
+string history_cleared
+string history_delete_entry
+string history_deleted
+string history_empty
+string history_entry_icon_desc
+string history_title
 string icon_content_description
 string info_field_cleared
 string info_no_page_to_reload

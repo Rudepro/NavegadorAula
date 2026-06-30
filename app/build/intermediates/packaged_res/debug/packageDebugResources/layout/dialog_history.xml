@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    dialog_history.xml
+    Panel BottomSheet del historial de navegación.
+
+    Estructura:
+    ┌────────────────────────────────────────────┐
+    │  ▬▬▬  (handle)                            │
+    │  Historial de Navegación    [Borrar todo] │
+    │  ─────────────────────────────────────── │
+    │  [ Fila 1 ]                               │
+    │  [ Fila 2 ]                               │
+    │  ...                                      │
+    │  [Estado vacío — si no hay entradas]      │
+    └────────────────────────────────────────────┘
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet"
+    android:paddingBottom="16dp">
+
+    <!-- Handle del BottomSheet -->
+    <View
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_handle"
+        android:alpha="0.4" />
+
+    <!-- Encabezado: Título + botón Borrar Todo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Ícono y título -->
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:tint="#1A3C6E"
+            android:contentDescription="@string/history_title" />
+
+        <TextView
+            android:id="@+id/tv_history_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="@string/history_title"
+            android:textColor="#1A1C23"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Botón Borrar Todo -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_clear_all_history"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="@string/history_clear_all"
+            android:textColor="#BA1A1A"
+            android:textSize="13sp"
+            android:fontFamily="sans-serif-medium"
+            app:icon="@android:drawable/ic_menu_delete"
+            app:iconSize="16dp"
+            app:iconTint="#BA1A1A"
+            app:iconGravity="textStart"
+            app:iconPadding="4dp"
+            app:rippleColor="#20BA1A1A" />
+
+    </LinearLayout>
+
+    <!-- Separador -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E2F0"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Lista del historial (dentro de un scroll con altura máxima) -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="400dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Estado vacío (mostrar cuando no hay historial) -->
+    <LinearLayout
+        android:id="@+id/layout_history_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:alpha="0.25"
+            android:contentDescription="@string/history_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/history_empty"
+            android:textColor="#757891"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>
