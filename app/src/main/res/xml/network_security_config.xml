@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Configuración de seguridad de red.
+    Principio: Denegar TODO el tráfico en texto claro (HTTP) sin excepción.
+    Solo se permite comunicación cifrada HTTPS/TLS.
+    Esta configuración refuerza android:usesCleartextTraffic="false" del Manifest.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Solo confiar en CAs del sistema operativo (sin CAs de usuario) -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

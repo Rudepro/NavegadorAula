@@ -1,0 +1,314 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:2:1-34:12
+MERGED from [androidx.databinding:viewbinding:8.7.3] C:\Users\elbet\.gradle\caches\8.9\transforms\2d98f9dc37f8e2dcdd0d9dd4e4199c8d\transformed\viewbinding-8.7.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\elbet\.gradle\caches\8.9\transforms\9430ad5e17987e680b80b44b90bf5c16\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\elbet\.gradle\caches\8.9\transforms\2b9361acadb4d42219bcf09cdac3536e\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\elbet\.gradle\caches\8.9\transforms\ba7831c9d4eec6a6e5d323f7ff23e545\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\elbet\.gradle\caches\8.9\transforms\8265414db37dde44d4f05de5bbe5c042\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\80172631c310469f0cac2846029973d8\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3626dc7bf0d75a89bb2b51528d0b732a\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\elbet\.gradle\caches\8.9\transforms\c00e979c6c989dfbc93f2f4c41aae447\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\elbet\.gradle\caches\8.9\transforms\ac0fbe1fe9326dce2f0d00c1c436cee4\transformed\activity-1.8.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\b70607ce3b05a6b1af813039387d19a9\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\719e5eea9198d2ca49a967a6a8436d5f\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\elbet\.gradle\caches\8.9\transforms\e274b7fc5a648f914d1cd7704178a49e\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\0b5a31679568f6380321b1552facade0\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bf2f91ec61d07c47b8d4f48ebe88f8e4\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\fdb497ab7c4ccf9dbcb6e922e61174e2\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\6c89d0f319e9c8d7d9891a75d043ae60\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\546fbe1e08e19df0a6a34bfc83c20d3f\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\39e4e45010bc55ff6833e5a6e4270c07\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\27e6b95cdae4749cdacfea146abe6a9f\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\dd49b1f68d9c98aab4a34987629448f4\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\elbet\.gradle\caches\8.9\transforms\8663cfbf9694c79716b38551b5a690ff\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\b006b6f3828fb716642baa947d51257a\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\95237e9e0941731b3db788042a24ea0f\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\3bd8cdf34788a4e092d280368b41be63\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\794b26d417fd3d3bdae369a2b2d78bcd\transformed\lifecycle-runtime-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\ea77376b3c94463a24fb73399cbed965\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\eb5ee5e9670f27f8a635ca0620b252df\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\37c19cf830361a5ebb1882ac4f13cca4\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\be2af256b2992f2c3e567a77f6514fc3\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\4e18d51cbb40be941375f6ec08d3bb9e\transformed\core-ktx-1.15.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3a03e65b200a8f0e5b8caa7d2d497231\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\27f6ef5827017c1dc9fdecb03645d192\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\b1eec57a916e6d51b48e0b3d056c9519\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\325d0ce4d1ff112cd5aabf140652288f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bd1b32ec3fee682dd20f6eeac6568d8b\transformed\tracing-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\706a30fb18601add375eff5691d72874\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\2d4106297399869808a10aa864a87cac\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f42c9f19117b0718862c55b96d479e24\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\a679c7cd38dbe9071b790cf5aced33eb\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\elbet\.gradle\caches\8.9\transforms\b33def4a70c002a4a73fa1d20c68ef76\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\elbet\.gradle\caches\8.9\transforms\309152b0e5b19225057995d504f61a8d\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:5:22-64
+application
+ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:7:5-32:19
+INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:7:5-32:19
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\elbet\.gradle\caches\8.9\transforms\9430ad5e17987e680b80b44b90bf5c16\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\elbet\.gradle\caches\8.9\transforms\9430ad5e17987e680b80b44b90bf5c16\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\elbet\.gradle\caches\8.9\transforms\2b9361acadb4d42219bcf09cdac3536e\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\elbet\.gradle\caches\8.9\transforms\2b9361acadb4d42219bcf09cdac3536e\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\325d0ce4d1ff112cd5aabf140652288f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\325d0ce4d1ff112cd5aabf140652288f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\706a30fb18601add375eff5691d72874\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\706a30fb18601add375eff5691d72874\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:11:9-54
+	android:icon
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:13:9-51
+	android:networkSecurityConfig
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:14:9-69
+	android:usesCleartextTraffic
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:15:9-45
+meta-data#android.webkit.WebView.EnableSafeBrowsing
+ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:18:9-20:36
+	android:value
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:20:13-33
+	android:name
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:19:13-69
+activity#com.example.navegadoraula.MainActivity
+ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:22:9-30:20
+	android:windowSoftInputMode
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:25:13-55
+	android:exported
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:24:13-36
+	android:name
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:23:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:26:13-29:29
+action#android.intent.action.MAIN
+ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:27:17-69
+	android:name
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:27:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:28:17-77
+	android:name
+		ADDED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml:28:27-74
+uses-sdk
+INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml
+INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.7.3] C:\Users\elbet\.gradle\caches\8.9\transforms\2d98f9dc37f8e2dcdd0d9dd4e4199c8d\transformed\viewbinding-8.7.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.7.3] C:\Users\elbet\.gradle\caches\8.9\transforms\2d98f9dc37f8e2dcdd0d9dd4e4199c8d\transformed\viewbinding-8.7.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\elbet\.gradle\caches\8.9\transforms\9430ad5e17987e680b80b44b90bf5c16\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\elbet\.gradle\caches\8.9\transforms\9430ad5e17987e680b80b44b90bf5c16\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\elbet\.gradle\caches\8.9\transforms\2b9361acadb4d42219bcf09cdac3536e\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\elbet\.gradle\caches\8.9\transforms\2b9361acadb4d42219bcf09cdac3536e\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\elbet\.gradle\caches\8.9\transforms\ba7831c9d4eec6a6e5d323f7ff23e545\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\elbet\.gradle\caches\8.9\transforms\ba7831c9d4eec6a6e5d323f7ff23e545\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\elbet\.gradle\caches\8.9\transforms\8265414db37dde44d4f05de5bbe5c042\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\elbet\.gradle\caches\8.9\transforms\8265414db37dde44d4f05de5bbe5c042\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\80172631c310469f0cac2846029973d8\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\80172631c310469f0cac2846029973d8\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3626dc7bf0d75a89bb2b51528d0b732a\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3626dc7bf0d75a89bb2b51528d0b732a\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\elbet\.gradle\caches\8.9\transforms\c00e979c6c989dfbc93f2f4c41aae447\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\elbet\.gradle\caches\8.9\transforms\c00e979c6c989dfbc93f2f4c41aae447\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\elbet\.gradle\caches\8.9\transforms\ac0fbe1fe9326dce2f0d00c1c436cee4\transformed\activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\elbet\.gradle\caches\8.9\transforms\ac0fbe1fe9326dce2f0d00c1c436cee4\transformed\activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\b70607ce3b05a6b1af813039387d19a9\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\b70607ce3b05a6b1af813039387d19a9\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\719e5eea9198d2ca49a967a6a8436d5f\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\719e5eea9198d2ca49a967a6a8436d5f\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\elbet\.gradle\caches\8.9\transforms\e274b7fc5a648f914d1cd7704178a49e\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\elbet\.gradle\caches\8.9\transforms\e274b7fc5a648f914d1cd7704178a49e\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\0b5a31679568f6380321b1552facade0\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\0b5a31679568f6380321b1552facade0\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bf2f91ec61d07c47b8d4f48ebe88f8e4\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bf2f91ec61d07c47b8d4f48ebe88f8e4\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\fdb497ab7c4ccf9dbcb6e922e61174e2\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\fdb497ab7c4ccf9dbcb6e922e61174e2\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\6c89d0f319e9c8d7d9891a75d043ae60\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\6c89d0f319e9c8d7d9891a75d043ae60\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\546fbe1e08e19df0a6a34bfc83c20d3f\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\546fbe1e08e19df0a6a34bfc83c20d3f\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\39e4e45010bc55ff6833e5a6e4270c07\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\39e4e45010bc55ff6833e5a6e4270c07\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\27e6b95cdae4749cdacfea146abe6a9f\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\27e6b95cdae4749cdacfea146abe6a9f\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\dd49b1f68d9c98aab4a34987629448f4\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\elbet\.gradle\caches\8.9\transforms\dd49b1f68d9c98aab4a34987629448f4\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\elbet\.gradle\caches\8.9\transforms\8663cfbf9694c79716b38551b5a690ff\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\elbet\.gradle\caches\8.9\transforms\8663cfbf9694c79716b38551b5a690ff\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\b006b6f3828fb716642baa947d51257a\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\b006b6f3828fb716642baa947d51257a\transformed\lifecycle-livedata-core-ktx-2.8.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\95237e9e0941731b3db788042a24ea0f\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\95237e9e0941731b3db788042a24ea0f\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\3bd8cdf34788a4e092d280368b41be63\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\3bd8cdf34788a4e092d280368b41be63\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\794b26d417fd3d3bdae369a2b2d78bcd\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\794b26d417fd3d3bdae369a2b2d78bcd\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\ea77376b3c94463a24fb73399cbed965\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\ea77376b3c94463a24fb73399cbed965\transformed\lifecycle-livedata-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\eb5ee5e9670f27f8a635ca0620b252df\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\eb5ee5e9670f27f8a635ca0620b252df\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\37c19cf830361a5ebb1882ac4f13cca4\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\37c19cf830361a5ebb1882ac4f13cca4\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\be2af256b2992f2c3e567a77f6514fc3\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\be2af256b2992f2c3e567a77f6514fc3\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\4e18d51cbb40be941375f6ec08d3bb9e\transformed\core-ktx-1.15.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\4e18d51cbb40be941375f6ec08d3bb9e\transformed\core-ktx-1.15.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3a03e65b200a8f0e5b8caa7d2d497231\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3a03e65b200a8f0e5b8caa7d2d497231\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\27f6ef5827017c1dc9fdecb03645d192\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\27f6ef5827017c1dc9fdecb03645d192\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\b1eec57a916e6d51b48e0b3d056c9519\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\b1eec57a916e6d51b48e0b3d056c9519\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\325d0ce4d1ff112cd5aabf140652288f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\325d0ce4d1ff112cd5aabf140652288f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bd1b32ec3fee682dd20f6eeac6568d8b\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bd1b32ec3fee682dd20f6eeac6568d8b\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\706a30fb18601add375eff5691d72874\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\706a30fb18601add375eff5691d72874\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\2d4106297399869808a10aa864a87cac\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\2d4106297399869808a10aa864a87cac\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f42c9f19117b0718862c55b96d479e24\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f42c9f19117b0718862c55b96d479e24\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\a679c7cd38dbe9071b790cf5aced33eb\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\elbet\.gradle\caches\8.9\transforms\a679c7cd38dbe9071b790cf5aced33eb\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\elbet\.gradle\caches\8.9\transforms\b33def4a70c002a4a73fa1d20c68ef76\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\elbet\.gradle\caches\8.9\transforms\b33def4a70c002a4a73fa1d20c68ef76\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\elbet\.gradle\caches\8.9\transforms\309152b0e5b19225057995d504f61a8d\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\elbet\.gradle\caches\8.9\transforms\309152b0e5b19225057995d504f61a8d\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\laragon\www\NavegadorAula\app\src\main\AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\325d0ce4d1ff112cd5aabf140652288f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\elbet\.gradle\caches\8.9\transforms\325d0ce4d1ff112cd5aabf140652288f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\elbet\.gradle\caches\8.9\transforms\f74a28459af9e2f6c23b0e34a095b7be\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+permission#com.example.navegadoraula.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.navegadoraula.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\elbet\.gradle\caches\8.9\transforms\bce079e7bf66fbcd35e1a6cae21511f3\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\elbet\.gradle\caches\8.9\transforms\559e879288ff7a48085acf51b4aa65ef\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elbet\.gradle\caches\8.9\transforms\3741ac99db477332e361306d3719c016\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92

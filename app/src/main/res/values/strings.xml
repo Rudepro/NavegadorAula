@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">NavegadorAula</string>
+
+    <!-- Textos de la UI -->
+    <string name="hint_url">Ingrese la URL (https://…)</string>
+    <string name="btn_send">Enviar</string>
+    <string name="btn_clear">Borrar</string>
+    <string name="btn_reload">Recargar</string>
+    <string name="label_url">Dirección web</string>
+    <string name="logo_description">Logo de NavegadorAula</string>
+    <string name="app_subtitle">Navegador Seguro Educativo</string>
+    <string name="loading">Cargando…</string>
+
+    <!-- =============================================
+         MENSAJES DE VALIDACIÓN DE URL
+         ============================================= -->
+    <string name="error_url_spaces">La URL no puede contener espacios en blanco.</string>
+    <string name="error_url_https_required">La URL debe comenzar con https://.</string>
+    <string name="error_url_invalid">La dirección ingresada no es válida. Verifique el formato (ej: https://dominio.com).</string>
+
+    <!-- =============================================
+         MENSAJES DE BLOQUEO DE CONTENIDO
+         ============================================= -->
+    <string name="error_domain_blocked">El dominio solicitado se encuentra bloqueado por políticas de seguridad.</string>
+    <string name="error_keyword_blocked">Este sitio web no está permitido.</string>
+    <string name="error_html_content_blocked">Este sitio web no está permitido.</string>
+    <string name="error_metadata_blocked">Este sitio web no está permitido.</string>
+    <string name="error_redirect_blocked">El dominio solicitado se encuentra bloqueado por políticas de seguridad.</string>
+    <string name="error_safe_browsing">Este sitio fue bloqueado por Google Safe Browsing por representar un riesgo de seguridad.</string>
+
+    <!-- =============================================
+         MENSAJES DE ERROR DE RED / SSL
+         ============================================= -->
+    <string name="error_connection">No fue posible acceder al sitio. Verifique su conexión a Internet e intente nuevamente.</string>
+    <string name="error_ssl">El certificado de seguridad del sitio no es válido o no es de confianza. La conexión fue cancelada.</string>
+    <string name="error_protocol_not_allowed">Solo se permite navegar a sitios con protocolo https://.</string>
+
+    <!-- =============================================
+         MENSAJES INFORMATIVOS
+         ============================================= -->
+    <string name="info_no_page_to_reload">No existe ninguna página para recargar.</string>
+    <string name="info_field_cleared">Campo de URL limpiado.</string>
+    <string name="info_page_blocked_cleanup">Página bloqueada. Datos de navegación limpiados.</string>
+</resources>

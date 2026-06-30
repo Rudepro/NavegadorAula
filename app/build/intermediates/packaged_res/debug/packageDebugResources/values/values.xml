@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blocked_indicator">#BA1A1A</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="divider_color">#E0E2F0</color>
+    <color name="logo_gradient_end">#2563B0</color>
+    <color name="logo_gradient_start">#1A3C6E</color>
+    <color name="md_background">#F0F2FF</color>
+    <color name="md_error">#BA1A1A</color>
+    <color name="md_error_container">#FFDAD6</color>
+    <color name="md_on_error">#FFFFFF</color>
+    <color name="md_on_error_container">#410002</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_on_primary_container">#001845</color>
+    <color name="md_on_secondary">#FFFFFF</color>
+    <color name="md_on_secondary_container">#001551</color>
+    <color name="md_on_surface">#1A1C23</color>
+    <color name="md_on_surface_variant">#44475A</color>
+    <color name="md_on_tertiary">#FFFFFF</color>
+    <color name="md_on_tertiary_container">#00210E</color>
+    <color name="md_outline">#757891</color>
+    <color name="md_primary">#1A3C6E</color>
+    <color name="md_primary_container">#D5E3FF</color>
+    <color name="md_secondary">#2563B0</color>
+    <color name="md_secondary_container">#D8E2FF</color>
+    <color name="md_surface">#F8F9FF</color>
+    <color name="md_surface_variant">#E0E2F0</color>
+    <color name="md_tertiary">#1A6B3C</color>
+    <color name="md_tertiary_container">#A7F3C4</color>
+    <color name="progress_track">#D5E3FF</color>
+    <color name="success_indicator">#1A6B3C</color>
+    <string name="app_name">NavegadorAula</string>
+    <string name="app_subtitle">Navegador Seguro Educativo</string>
+    <string name="btn_clear">Borrar</string>
+    <string name="btn_reload">Recargar</string>
+    <string name="btn_send">Enviar</string>
+    <string name="error_connection">No fue posible acceder al sitio. Verifique su conexión a Internet e intente nuevamente.</string>
+    <string name="error_domain_blocked">El dominio solicitado se encuentra bloqueado por políticas de seguridad.</string>
+    <string name="error_html_content_blocked">Este sitio web no está permitido.</string>
+    <string name="error_keyword_blocked">Este sitio web no está permitido.</string>
+    <string name="error_metadata_blocked">Este sitio web no está permitido.</string>
+    <string name="error_protocol_not_allowed">Solo se permite navegar a sitios con protocolo https://.</string>
+    <string name="error_redirect_blocked">El dominio solicitado se encuentra bloqueado por políticas de seguridad.</string>
+    <string name="error_safe_browsing">Este sitio fue bloqueado por Google Safe Browsing por representar un riesgo de seguridad.</string>
+    <string name="error_ssl">El certificado de seguridad del sitio no es válido o no es de confianza. La conexión fue cancelada.</string>
+    <string name="error_url_https_required">La URL debe comenzar con https://.</string>
+    <string name="error_url_invalid">La dirección ingresada no es válida. Verifique el formato (ej: https://dominio.com).</string>
+    <string name="error_url_spaces">La URL no puede contener espacios en blanco.</string>
+    <string name="hint_url">Ingrese la URL (https://…)</string>
+    <string name="info_field_cleared">Campo de URL limpiado.</string>
+    <string name="info_no_page_to_reload">No existe ninguna página para recargar.</string>
+    <string name="info_page_blocked_cleanup">Página bloqueada. Datos de navegación limpiados.</string>
+    <string name="label_url">Dirección web</string>
+    <string name="loading">Cargando…</string>
+    <string name="logo_description">Logo de NavegadorAula</string>
+    <style name="Theme.NavegadorAula" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/md_primary</item>
+        <item name="colorOnPrimary">@color/md_on_primary</item>
+        <item name="colorPrimaryContainer">@color/md_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/md_on_primary_container</item>
+
+        <item name="colorSecondary">@color/md_secondary</item>
+        <item name="colorOnSecondary">@color/md_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/md_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/md_on_secondary_container</item>
+
+        <item name="colorTertiary">@color/md_tertiary</item>
+        <item name="colorOnTertiary">@color/md_on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/md_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/md_on_tertiary_container</item>
+
+        <item name="colorError">@color/md_error</item>
+        <item name="colorOnError">@color/md_on_error</item>
+        <item name="colorErrorContainer">@color/md_error_container</item>
+        <item name="colorOnErrorContainer">@color/md_on_error_container</item>
+
+        <item name="android:colorBackground">@color/md_background</item>
+        <item name="colorOnBackground">@color/md_on_surface</item>
+        <item name="colorSurface">@color/md_surface</item>
+        <item name="colorOnSurface">@color/md_on_surface</item>
+        <item name="colorSurfaceVariant">@color/md_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/md_on_surface_variant</item>
+        <item name="colorOutline">@color/md_outline</item>
+    </style>
+    <style name="Widget.NavegadorAula.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    <style name="Widget.NavegadorAula.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Widget.NavegadorAula.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    <style name="Widget.NavegadorAula.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="trackColor">@color/progress_track</item>
+        <item name="indicatorColor">@color/md_primary</item>
+        <item name="trackThickness">4dp</item>
+        <item name="android:indeterminate">false</item>
+    </style>
+</resources>
